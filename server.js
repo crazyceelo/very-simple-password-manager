@@ -1,3 +1,4 @@
+// require packages
 const express = require('express');
 const cors = require('cors');
 const PORT =  process.env.PORT || 8081;
@@ -39,3 +40,26 @@ db.once('open', () => {
 app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`);
 });
+
+// require db models
+const AppDetails = require('./models/appDetails');
+
+// API
+app.get('/current-app', (req, res) => {
+  AppDetails.find(function (err, data) {
+    console.log(data);
+    res.send(data);
+  });
+});
+
+app.post('/new-app', (req, res) => {
+  // need to put mongoose actions here
+});
+
+app.put('/update-app', (req, res) => {
+ // need to put mongoose actions here
+})
+
+app.delete('/delete-app', (req, res) => {
+  // need to put mongoose actions here
+})

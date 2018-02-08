@@ -53,13 +53,18 @@ app.get('/current-app', (req, res) => {
 });
 
 app.post('/new-app', (req, res) => {
-  // need to put mongoose actions here
+  // console.log('test');
+  // res.send('test');
 });
 
 app.put('/update-app', (req, res) => {
+  console.log('test');
+  res.send('test');
  // need to put mongoose actions here
 })
 
 app.delete('/delete-app', (req, res) => {
+  console.log('test');
+  res.send('test');
   // need to put mongoose actions here
 })

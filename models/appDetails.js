@@ -4,20 +4,23 @@ const Schema = mongoose.Schema;
 const ApplicationSchema = new Schema({
   appName: {
     type: String,
-    require: true,
-    unique: true
+    required: true,
+    unique: false,
+    trim: true
   },
 
   userName: {
     type: String,
-    require: true,
-    unique: false
+    required: true,
+    unique: false,
+    trim: true
   },
 
   password: {
     type: String,
-    require: true,
-    unique: false
+    required: true,
+    unique: false,
+    trim: true
   }
 });
 

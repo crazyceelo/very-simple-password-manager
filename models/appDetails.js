@@ -21,6 +21,13 @@ const ApplicationSchema = new Schema({
     required: true,
     unique: false,
     trim: true
+  },
+
+  site: {
+    type: String,
+    required: false,
+    unique: false,
+    trim: true
   }
 });
 

@@ -63,6 +63,7 @@ router.route('/post').post(function (req, res) {
   newApp.appName = req.body.appName;
   newApp.userName = req.body.userName;
   newApp.password = req.body.password;
+  newApp.site = req.body.site;
 
   newApp.save(function () {
 

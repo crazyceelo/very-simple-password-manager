@@ -1,7 +1,7 @@
 // require packages
 const express = require('express');
 const cors = require('cors');
-const PORT =  process.env.PORT || 3000;
+const PORT =  process.env.PORT || 8080;
 const app = express();
 const router = express.Router();
 const logger = require('morgan');

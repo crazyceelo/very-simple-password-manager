@@ -9,6 +9,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const Application = require('./models/appDetails');
+const path = require('path');
+
 
 // server configuration
 // const app = express();
@@ -37,7 +39,8 @@ app.use(function (req, res, next) {
 app.use('/api', router);
 
 router.get('/', function (req, res) {
-  res.json({ message: 'test test' });
+  // res.json({ message: 'test test' });
+  res.sendFile(path)
 });
 
 const db = mongoose.connection;

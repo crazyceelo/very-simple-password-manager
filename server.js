@@ -39,8 +39,8 @@ app.use(function (req, res, next) {
 app.use('/api', router);
 
 router.get('/', function (req, res) {
-  // res.json({ message: 'test test' });
-  res.sendFile(path)
+  res.json({ message: 'test test' });
+  // res.sendFile(path.resolve(__dirname, './public/', 'index.html'));
 });
 
 const db = mongoose.connection;
